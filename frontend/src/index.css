@@ -1,1 +1,19 @@
+@import url("https://fonts.cdnfonts.com/css/helvetica-neue-55");
 @import "tailwindcss";
+
+@theme {
+  --color-background: #f7f4ed;
+  --color-primary: #191919;
+  --color-secondary: ##fff;
+  --color-button: #1a8917;
+  --font-primary: "Helvetica Neue", sans-serif;
+}
+
+/* Apply the theme to the entire document  */
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-primary);
+    font-family: var(--font-primary);
+  }
+}
