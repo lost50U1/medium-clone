@@ -1,19 +1,22 @@
-@import url("https://fonts.cdnfonts.com/css/helvetica-neue-55");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
 
 @theme {
-  --color-background: #f7f4ed;
-  --color-primary: #191919;
-  --color-secondary: ##fff;
-  --color-button: #1a8917;
-  --font-primary: "Helvetica Neue", sans-serif;
+  --color-background: #121212;
+  --color-primary: #121212;
+  --color-secondary: #1e1e1e;
+  --color-accent: #64ffda;
+  --color-textPrimary: #ffffff;
+  --color-textSecondary: #b3b3b3;
+  --color-border: #333333;
+  --font-primary: "Inter", sans-serif;
 }
 
 /* Apply the theme to the entire document  */
 @layer base {
   body {
     background-color: var(--color-background);
-    color: var(--color-primary);
+    color: var(--color-textPrimary);
     font-family: var(--font-primary);
   }
 }
