@@ -1,5 +1,6 @@
 import React from "react";
 import { Logo } from "../../assets";
+import { Button } from "../ui/button";
 
 export const Navbar = () => {
   return (
@@ -12,6 +13,7 @@ export const Navbar = () => {
           <ul className="flex gap-4">
             <li>Sign in</li>
             <li>Get Started</li>
+            <Button>Click me</Button>
           </ul>
         </nav>
       </div>
