@@ -8,7 +8,7 @@ export const Home = () => {
     <main className="min-h-screen flex flex-col">
       <Navbar />
       <Line />
-      <div className="bg-secondary max-w-[1192px] mx-auto w-full flex-1">
+      <div className="max-w-7xl mx-auto w-full flex-1 border-l border-r border-border px-4">
         Home
       </div>
       <Line />
