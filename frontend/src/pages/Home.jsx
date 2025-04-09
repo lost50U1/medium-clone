@@ -11,10 +11,10 @@ export const Home = () => {
       <Line />
       <div className="max-w-7xl mx-auto w-full flex-1 border-l border-r border-border px-4">
         <div className="flex flex-col min-h-[calc(100vh-8.9rem)] items-center justify-center">
-          <h1 className="text-6xl font-bold text-center mt-10 w-3/5">
+          <h1 className="text-2xl md:text-6xl font-bold text-center mt-10 md:w-3/5">
             Share your thoughts with the world
           </h1>
-          <p className="mt-4 text-2xl text-center w-1/2 text-foreground/70">
+          <p className="mt-4 text-lg md:text-2xl text-center md:w-1/2 text-foreground/70">
             LiteBlog is a minimalist blogging platform where ideas shine in the
             dark.
           </p>

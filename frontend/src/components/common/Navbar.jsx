@@ -10,9 +10,10 @@ export const Navbar = () => {
     <header className="max-w-7xl mx-auto w-full py-[18.5px] border-l border-r border-border px-4">
       <div className="flex justify-between items-center">
         <div className="w-40 h-auto">
-          {/* <img src={Logo} alt="logo" className="w-full h-full object-cover" /> */}
           <Logo
-            color={theme === "dark" || theme === "system" ? "white" : "black"}
+            color={
+              theme === "dark" || theme === "system" ? "#FFFFFF" : "#000000"
+            }
           />
         </div>
         <nav>
