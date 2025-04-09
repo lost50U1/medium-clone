@@ -111,6 +111,7 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
   --font-primary: "Inter", sans-serif;
+  --breakpoint-xs: 25rem;
 }
 /* ---break---  */
 @layer base {

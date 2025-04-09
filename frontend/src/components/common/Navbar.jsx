@@ -21,7 +21,9 @@ export const Navbar = () => {
               Sign In
             </Button>
             <Button>Get Started</Button>
-            <ModeToggle />
+            <div className="max-xs:hidden">
+              <ModeToggle />
+            </div>
           </div>
         </nav>
       </div>
