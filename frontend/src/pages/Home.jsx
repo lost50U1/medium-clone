@@ -1,8 +1,10 @@
 import React from "react";
-import { Navbar } from "../components/common/Navbar";
-import { Footer } from "../components/common/Footer";
-import { Line } from "../components/Line";
+import { Navbar } from "@/components/common/Navbar";
+import { Footer } from "@/components/common/Footer";
+import { Line } from "@/components/Line";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router";
+import { Paths } from "@/router/Paths";
 
 export const Home = () => {
   return (
@@ -18,7 +20,12 @@ export const Home = () => {
             LiteBlog is a minimalist blogging platform where ideas shine in the
             dark.
           </p>
-          <Button className="mt-8">Start Writing</Button>
+          <div className="flex gap-4 mt-8">
+            <Button>Start Writing</Button>
+            <Button variant="secondary" asChild>
+              <Link to={Paths.blogs}>Read Blogs</Link>
+            </Button>
+          </div>
         </div>
       </div>
       <Line />

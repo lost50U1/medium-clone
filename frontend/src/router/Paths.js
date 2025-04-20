@@ -7,5 +7,6 @@ export const Paths = {
   settings: "/settings",
   about: "/about",
   blog: "/blog",
+  blogs: "/blogs",
   notFound: "*",
 };

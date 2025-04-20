@@ -1,6 +1,6 @@
 import React from "react";
-import { Button } from "../ui/button";
-import { Logo } from "../Logo";
+import { Button } from "@/components/ui/button";
+import { Logo } from "@/components/Logo";
 import { ModeToggle } from "./ModeToggle";
 import { useTheme } from "@/hooks/useTheme";
 
