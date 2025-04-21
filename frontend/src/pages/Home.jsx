@@ -1,15 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import { Navbar } from "@/components/common/Navbar";
 import { Footer } from "@/components/common/Footer";
 import { Line } from "@/components/Line";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router";
 import { Paths } from "@/router/Paths";
-import { SignInModal } from "@/components/modals/SignInModal";
 import { useModals } from "@/hooks/useModals";
+import { AuthModal } from "@/components/modals/AuthModal";
 
 export const Home = () => {
   const { state, closeModal } = useModals();
+
+  // Control modal view: 'signIn', 'signUp', 'forgotPassword'
+  const [authView, setAuthView] = useState("signIn");
+
+  const handleOpen = state.signIn || state.signUp;
+  const handleClose = () => {
+    closeModal("signIn");
+    closeModal("signUp");
+  };
+
+  React.useEffect(() => {
+    if (state.signUp) setAuthView("signUp");
+    else if (state.signIn) setAuthView("signIn");
+  }, [state.signUp, state.signIn]);
+
   return (
     <>
       <main className="min-h-screen flex flex-col">
@@ -25,7 +40,9 @@ export const Home = () => {
               the dark.
             </p>
             <div className="flex gap-4 mt-8">
-              <Button>Start Writing</Button>
+              <Button onClick={() => setAuthView("signUp")}>
+                Start Writing
+              </Button>
               <Button variant="secondary" asChild>
                 <Link to={Paths.blogs}>Read Blogs</Link>
               </Button>
@@ -35,7 +52,13 @@ export const Home = () => {
         <Line />
         <Footer />
       </main>
-      <SignInModal open={state.signIn} onClose={() => closeModal("signIn")} />
+
+      <AuthModal
+        open={handleOpen}
+        onClose={handleClose}
+        view={authView}
+        onChangeView={setAuthView}
+      />
     </>
   );
 };

@@ -27,7 +27,7 @@ export const Navbar = () => {
             >
               Sign In
             </Button>
-            <Button>Get Started</Button>
+            <Button onClick={() => openModal("signUp")}>Get Started</Button>
             <div className="max-xs:hidden">
               <ModeToggle />
             </div>
