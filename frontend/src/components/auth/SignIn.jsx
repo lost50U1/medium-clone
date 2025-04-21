@@ -9,7 +9,7 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
-export const SignIn = () => {
+export const SignIn = ({ onNavigate }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle login logic here
@@ -29,12 +29,13 @@ export const SignIn = () => {
         <div className="grid gap-2">
           <div className="flex items-center">
             <Label htmlFor="password">Password</Label>
-            <a
-              href="#"
-              className="ml-auto text-sm underline-offset-2 hover:underline"
+            <Button
+              variant="link"
+              className="ml-auto text-sm underline-offset-4 hover:underline px-0"
+              onClick={() => onNavigate("forgotPassword")}
             >
               Forgot your password?
-            </a>
+            </Button>
           </div>
           <Input id="password" type="password" required />
         </div>
@@ -77,11 +78,15 @@ export const SignIn = () => {
           <span className="sr-only">Login with Meta</span>
         </Button>
       </div>
-      <DialogFooter className="text-center text-sm sm:justify-center">
+      <DialogFooter className="text-center text-sm sm:justify-center sm:items-center">
         Don&apos;t have an account?{" "}
-        <a href="#" className="underline underline-offset-4">
-          Sign up
-        </a>
+        <Button
+          variant="link"
+          className="underline underline-offset-4 hover:no-underline px-0"
+          onClick={() => onNavigate("signUp")}
+        >
+          Sign In
+        </Button>
       </DialogFooter>
     </>
   );

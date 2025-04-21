@@ -1,6 +1,8 @@
 export const initialState = {
   signIn: false,
   signUp: false,
+  forgotPassword: false,
+  resetPassword: false,
 };
 
 export function modalsReducer(state, action) {
