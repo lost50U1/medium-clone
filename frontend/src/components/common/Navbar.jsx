@@ -4,6 +4,7 @@ import { Logo } from "@/components/Logo";
 import { ModeToggle } from "./ModeToggle";
 import { useTheme } from "@/hooks/useTheme";
 import { useModals } from "@/hooks/useModals";
+import { Link } from "react-router";
 
 export const Navbar = () => {
   const { theme } = useTheme();
@@ -11,13 +12,13 @@ export const Navbar = () => {
   return (
     <header className="max-w-7xl mx-auto w-full py-[18.5px] border-l border-r border-border px-4">
       <div className="flex justify-between items-center">
-        <div className="w-40 h-auto">
+        <Link to="/" className="w-40 h-auto">
           <Logo
             color={
               theme === "dark" || theme === "system" ? "#FFFFFF" : "#000000"
             }
           />
-        </div>
+        </Link>
         <nav>
           <div className="flex gap-4 items-center">
             <Button
