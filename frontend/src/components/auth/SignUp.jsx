@@ -17,7 +17,9 @@ export const SignUp = () => {
   return (
     <>
       <DialogHeader className="text-center items-center">
-        <DialogTitle className="text-2xl font-bold">Welcome back</DialogTitle>
+        <DialogTitle className="text-2xl font-bold">
+          Create a LiteBlog account
+        </DialogTitle>
         <DialogDescription>Sign Up to LiteBlog</DialogDescription>
       </DialogHeader>
       <form onSubmit={handleSubmit} className="space-y-6 mt-4">
@@ -40,7 +42,7 @@ export const SignUp = () => {
         </div>
 
         <Button type="submit" className="w-full">
-          Login
+          Sign Up
         </Button>
       </form>
       <div className="relative mt-6 text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t after:border-border">
@@ -78,9 +80,9 @@ export const SignUp = () => {
         </Button>
       </div>
       <DialogFooter className="text-center text-sm sm:justify-center">
-        Don&apos;t have an account?{" "}
+        Have an account ?{" "}
         <a href="#" className="underline underline-offset-4">
-          Sign up
+          Sign In
         </a>
       </DialogFooter>
     </>

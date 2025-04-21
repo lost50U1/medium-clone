@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Navbar } from "@/components/common/Navbar";
 import { Footer } from "@/components/common/Footer";
 import { Line } from "@/components/Line";
@@ -11,7 +11,6 @@ import { AuthModal } from "@/components/modals/AuthModal";
 export const Home = () => {
   const { state, closeModal } = useModals();
 
-  // Control modal view: 'signIn', 'signUp', 'forgotPassword'
   const [authView, setAuthView] = useState("signIn");
 
   const handleOpen = state.signIn || state.signUp;
@@ -20,7 +19,7 @@ export const Home = () => {
     closeModal("signUp");
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (state.signUp) setAuthView("signUp");
     else if (state.signIn) setAuthView("signIn");
   }, [state.signUp, state.signIn]);
