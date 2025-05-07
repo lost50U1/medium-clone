@@ -6,6 +6,7 @@ import { useTheme } from "@/hooks/useTheme";
 import { useModals } from "@/hooks/useModals";
 import { Link } from "react-router";
 
+// todo: the sign in and sign up only appears in the home page doesnt appear on other pages fix that
 export const Navbar = () => {
   const { theme } = useTheme();
   const { openModal } = useModals();

@@ -6,7 +6,7 @@ export const Paths = {
   profile: "/profile",
   settings: "/settings",
   about: "/about",
-  blog: "/blog",
+  blog: "/blog/:id",
   blogs: "/blogs",
   notFound: "*",
 };

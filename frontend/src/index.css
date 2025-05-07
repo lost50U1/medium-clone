@@ -122,3 +122,11 @@
     @apply bg-background text-foreground font-primary;
   }
 }
+
+/* ---components--- */
+
+@layer components {
+  .heading {
+    @apply text-2xl md:text-6xl font-bold text-center;
+  }
+}

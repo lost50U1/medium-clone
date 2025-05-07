@@ -24,7 +24,7 @@ export const Home = () => {
 
   return (
     <>
-      <MainLayout>
+      <MainLayout centered>
         <h1 className="text-2xl md:text-6xl font-bold text-center mt-10 md:w-3/5">
           Share your thoughts with the world
         </h1>
