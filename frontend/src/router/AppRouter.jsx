@@ -6,6 +6,7 @@ import { BlogsPage } from "@/pages/BlogsPage";
 import { NotFoundPage } from "@/pages/NotFoundPage";
 import { DashboardPage } from "@/pages/DashboardPage";
 import { ProtectedRoute } from "./ProtectedRoute";
+import { BlogPage } from "@/pages/BlogPage";
 
 export const AppRouter = () => {
   const [user, setUser] = useState(null);
@@ -24,7 +25,7 @@ export const AppRouter = () => {
       {/* <Route path={Paths.profile} element={<ProfilePage />} /> */}
       {/* <Route path={Paths.settings} element={<SettingsPage />} /> */}
       {/* <Route path={Paths.about} element={<AboutPage />} /> */}
-      {/* <Route path={Paths.blog} element={<BlogPage />} /> */}
+      <Route path={Paths.blog} element={<BlogPage />} />
       <Route path={Paths.blogs} element={<BlogsPage />} />
       <Route path={Paths.notFound} element={<NotFoundPage />} />
     </Routes>

@@ -11,7 +11,7 @@ export const MainLayout = ({ children, centered }) => {
       <div className="max-w-7xl mx-auto w-full flex-1 border-l border-r border-border px-4">
         <div
           className={`flex flex-col min-h-[calc(100vh-8.9rem)] ${
-            centered ? "items-center justify-center" : "justify-center py-10"
+            centered ? "items-center justify-center" : "items-center py-10"
           }`}
         >
           {children}

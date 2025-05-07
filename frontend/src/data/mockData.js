@@ -9,6 +9,7 @@ export const blogs = [
     date: "2025-04-01",
     imageUrl: "https://picsum.photos/id/1018/400/300",
     tags: ["react", "javascript"],
+    readTime: 4,
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ export const blogs = [
     date: "2025-04-03",
     imageUrl: "https://picsum.photos/id/1015/400/300",
     tags: ["react", "context-api"],
+    readTime: 3,
   },
   {
     id: 3,
@@ -31,6 +33,7 @@ export const blogs = [
     date: "2025-04-05",
     imageUrl: "https://picsum.photos/id/1019/400/300",
     tags: ["tailwind", "css"],
+    readTime: 5,
   },
   {
     id: 4,
@@ -42,6 +45,7 @@ export const blogs = [
     date: "2025-04-06",
     imageUrl: "https://picsum.photos/id/1020/400/300",
     tags: ["typescript", "javascript"],
+    readTime: 2,
   },
   {
     id: 5,
@@ -53,6 +57,7 @@ export const blogs = [
     date: "2025-04-08",
     imageUrl: "https://picsum.photos/id/1021/400/300",
     tags: ["react", "components"],
+    readTime: 6,
   },
   {
     id: 6,
@@ -64,6 +69,7 @@ export const blogs = [
     date: "2025-04-10",
     imageUrl: "https://picsum.photos/id/1022/400/300",
     tags: ["shadcn-ui", "react"],
+    readTime: 7,
   },
   {
     id: 7,
@@ -75,6 +81,7 @@ export const blogs = [
     date: "2025-04-12",
     imageUrl: "https://picsum.photos/id/1023/400/300",
     tags: ["vite", "tooling"],
+    readTime: 8,
   },
   {
     id: 8,
@@ -86,6 +93,7 @@ export const blogs = [
     date: "2025-04-14",
     imageUrl: "https://picsum.photos/id/1024/400/300",
     tags: ["react", "hooks"],
+    readTime: 9,
   },
   {
     id: 9,
@@ -97,5 +105,6 @@ export const blogs = [
     date: "2025-04-16",
     imageUrl: "https://picsum.photos/id/1025/400/300",
     tags: ["react", "vercel", "deployment"],
+    readTime: 10,
   },
 ];
