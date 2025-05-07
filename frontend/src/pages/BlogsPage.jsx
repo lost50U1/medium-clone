@@ -30,8 +30,8 @@ export const BlogsPage = () => {
       {/* blogs list */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2  lg:grid-cols-3 mb-10">
         {blogs.map((blog) => (
-          <Link to={`/blog/${blog.id}`} key={blog.id}>
-            <Card className="flex flex-col gap-4 py-4">
+          <Link to={`/blog/${blog.id}`} key={blog.id} className="h-full">
+            <Card className="flex flex-col justify-between h-full py-4">
               <CardContent className="px-4">
                 <div className="w-full h-48 mb-6">
                   <img
@@ -42,7 +42,9 @@ export const BlogsPage = () => {
                 </div>
                 <h2 className="text-lg font-semibold">{blog.title}</h2>
                 <p className="text-sm text-muted-foreground line-clamp-3">
-                  {blog.description}
+                  {blog.description.length > 55
+                    ? blog.description.slice(0, 55) + "..."
+                    : blog.description}
                 </p>
                 {/* more info  */}
                 <div className="mb-2 mt-6 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-muted-foreground h-5">
