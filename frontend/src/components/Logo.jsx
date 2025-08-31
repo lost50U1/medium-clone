@@ -5,8 +5,8 @@ export const Logo = ({ color }) => {
     <svg
       style={{ fill: color }}
       className="w-full h-full object-cover"
-      width="814"
-      height="211"
+      width="100%"
+      height="100%"
       viewBox="0 0 814 211"
       xmlns="http://www.w3.org/2000/svg"
     >

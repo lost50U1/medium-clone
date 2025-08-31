@@ -1,16 +1,20 @@
 import React, { useState } from "react";
 import { Routes, Route } from "react-router";
 import { Paths } from "./Paths";
+
 import { Home } from "@/pages/Home";
 import { BlogsPage } from "@/pages/BlogsPage";
 import { NotFoundPage } from "@/pages/NotFoundPage";
-import { DashboardPage } from "@/pages/DashboardPage";
+import { DashboardPage } from "@/pages/dashboard/DashboardPage";
 import { ProtectedRoute } from "./ProtectedRoute";
 import { BlogPage } from "@/pages/BlogPage";
+import { DashboardLayout } from "@/layouts/DashboardLayout";
+import { ProfilePage } from "@/pages/dashboard/ProfilePage";
+import { WriteBlogPage } from "@/pages/dashboard/WriteBlogPage";
+import { MyBlogPage } from "@/pages/dashboard/MyBlogPage";
 
-// todo: 5 pages remaining
 export const AppRouter = () => {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState("text");
   return (
     <Routes>
       <Route path={Paths.home} element={<Home />} />
@@ -18,13 +22,15 @@ export const AppRouter = () => {
         path={Paths.dashboard}
         element={
           <ProtectedRoute user={user}>
-            <DashboardPage />
+            <DashboardLayout />
           </ProtectedRoute>
         }
-      />
-      {/* since profile , settings , create blogs , my blogs page will be under dashboard they will be children routes of dashboard */}
-      {/* <Route path={Paths.profile} element={<ProfilePage />} /> */}
-      {/* <Route path={Paths.settings} element={<SettingsPage />} /> */}
+      >
+        <Route index element={<DashboardPage />} />
+        <Route path={Paths.profile} element={<ProfilePage />} />
+        <Route path={Paths.writeBlog} element={<WriteBlogPage />} />
+        <Route path={Paths.myBlog} element={<MyBlogPage />} />
+      </Route>
       <Route path={Paths.blog} element={<BlogPage />} />
       <Route path={Paths.blogs} element={<BlogsPage />} />
       <Route path={Paths.notFound} element={<NotFoundPage />} />
